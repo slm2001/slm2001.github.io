@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>MySQL索引 | 小明的博客</title>
-  <meta name="description" content="索引介绍索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。索引的作用就相当于书的目录。索引的底层数据结构存在很多类型，常见的索引结构有B树，B+树和Hash、红黑树。在MySQL中，InnoDB和MyISAM都是使用了B+树（平衡多路查找树）作为索引结构。 索引的优缺点优点：查询速度：使用索引可以大大加快数据的检索速度（大大减少检索的数据量），这也是创建索引的最主要">
+  <title>TCP怎么保证传输的有效性 | 小明的博客</title>
+  <meta name="description" content="TCP保证传输可靠性报文段基于数据块传输，数据块就是报文段 序列号保证不丢包，给每个包一个序列号，给包排序，去重。 校验和TCP 将保持它首部和数据的检验和。这是一个端到端的检验和，目的是检测数据在传输过程中的任何变化。如果收到段的检验和有差错，TCP 将丢弃这个报文段和不确认收到此报文段。 确认应答TCP 传输的过程中，每次接收方收到数据后，都会对传输方进行确认应答。也就是发送 ACK 报文。这">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL索引">
-<meta property="og:url" content="https://slm2001.github.io/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:title" content="TCP怎么保证传输的有效性">
+<meta property="og:url" content="https://slm2001.github.io/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/index.html">
 <meta property="og:site_name" content="小明的Blog">
-<meta property="og:description" content="索引介绍索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。索引的作用就相当于书的目录。索引的底层数据结构存在很多类型，常见的索引结构有B树，B+树和Hash、红黑树。在MySQL中，InnoDB和MyISAM都是使用了B+树（平衡多路查找树）作为索引结构。 索引的优缺点优点：查询速度：使用索引可以大大加快数据的检索速度（大大减少检索的数据量），这也是创建索引的最主要">
+<meta property="og:description" content="TCP保证传输可靠性报文段基于数据块传输，数据块就是报文段 序列号保证不丢包，给每个包一个序列号，给包排序，去重。 校验和TCP 将保持它首部和数据的检验和。这是一个端到端的检验和，目的是检测数据在传输过程中的任何变化。如果收到段的检验和有差错，TCP 将丢弃这个报文段和不确认收到此报文段。 确认应答TCP 传输的过程中，每次接收方收到数据后，都会对传输方进行确认应答。也就是发送 ACK 报文。这">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-21T08:44:12.000Z">
-<meta property="article:modified_time" content="2023-03-21T09:00:57.769Z">
+<meta property="article:published_time" content="2023-03-21T09:05:01.000Z">
+<meta property="article:modified_time" content="2023-03-21T09:08:41.570Z">
 <meta property="article:author" content="小明">
-<meta property="article:tag" content="索引">
+<meta property="article:tag" content="TCP">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://slm2001.github.io/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/index.html">
+  <link rel="canonical" href="https://slm2001.github.io/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/index.html">
   
     <link rel="alternate" href="/atom.xml" title="小明的Blog" type="application/atom+xml">
   
@@ -236,14 +236,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-MySQL索引" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-TCP怎么保证传输的有效性" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL索引
+      TCP怎么保证传输的有效性
     </h1>
   
 
@@ -251,48 +251,33 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/" class="article-date">
-	  <time datetime="2023-03-21T08:44:12.000Z" itemprop="datePublished">2023-03-21</time>
+	<a href="/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/" class="article-date">
+	  <time datetime="2023-03-21T09:05:01.000Z" itemprop="datePublished">2023-03-21</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/%E7%B4%A2%E5%BC%95/" rel="tag">索引</a>
+	<a class="article-tag-link-link" href="/tags/TCP/" rel="tag">TCP</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="索引介绍"><a href="#索引介绍" class="headerlink" title="索引介绍"></a>索引介绍</h1><p>索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。<br>索引的作用就相当于书的目录。<br>索引的底层数据结构存在很多类型，常见的索引结构有B树，B+树和Hash、红黑树。<br>在MySQL中，InnoDB和MyISAM都是使用了B+树（平衡多路查找树）作为索引结构。</p>
-<h1 id="索引的优缺点"><a href="#索引的优缺点" class="headerlink" title="索引的优缺点"></a>索引的优缺点</h1><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>查询速度：使用索引可以大大加快数据的检索速度（大大减少检索的数据量），这也是创建索引的最主要的原因。<br>唯一性：通过创建唯一性索引，可以保证数据库表中每一行数据的唯一性。</p>
-<h2 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h2><p>时间：创建索引和维护索引需要耗费许多时间。当对表中的数据进行增删改的时候，如果数据有索引，那么索引也需要动态修改，会降低SQL执行效率。<br>空间：索引需要使用物理文件存储，也会耗费一定的空间。</p>
-<h1 id="索引的底层数据结构"><a href="#索引的底层数据结构" class="headerlink" title="索引的底层数据结构"></a>索引的底层数据结构</h1><h2 id="Hash表"><a href="#Hash表" class="headerlink" title="Hash表"></a>Hash表</h2><p>哈希表是键值对的集合，通过键（key）即可以快速取出对应的值（value），因此哈希表可以快速检索数据，接近O(1)。</p>
-<h2 id="B树、B-树"><a href="#B树、B-树" class="headerlink" title="B树、B+树"></a>B树、B+树</h2><p>B树也叫B-树，全称 多路平衡查找树，B+树是B树的一种变体。<br>目前大部分数据库系统及文件系统都采用B-Tree或其变种B+Tree作为索引结构</p>
-<h2 id="B树、B-树的异同"><a href="#B树、B-树的异同" class="headerlink" title="B树、B+树的异同"></a>B树、B+树的异同</h2><p>B 树的所有节点既存放键(key) 也存放数据(data)，而 B+树只有叶子节点存放 key 和data，其他内节点只存放 key。<br>B 树的叶子节点都是独立的，B+树的叶子节点有一条引用链指向与它相邻的叶子节点。<br>B 树的检索的过程相当于对范围内的每个节点的关键字做二分查找，可能还没有到达叶子节点，检索就结束了。而 B+树的检索效率就很稳定了，任何查找都是从根节点到叶子节点的过程，叶子节点的顺序检索很明显。<br>在 MySQL 中，MyISAM 引擎和 InnoDB 引擎都是使用 B+Tree 作为索引结构，但是实现方式不太一样。<br>MyISAM是非聚集索引，InnoDB是聚集索引，其余的是它辅助索引。</p>
-<h1 id="索引类型总结"><a href="#索引类型总结" class="headerlink" title="索引类型总结"></a>索引类型总结</h1><h2 id="按照数据结构维度划分"><a href="#按照数据结构维度划分" class="headerlink" title="按照数据结构维度划分"></a>按照数据结构维度划分</h2><p>B+树索引：MySQL里默认和最常用的索引类型。只有叶子节点存储value，非叶子节点只有指针和key。<br>哈希索引：类似键值的形式，一次即可定位。<br>RTree索引、全文索引。</p>
-<h2 id="按照底层存储方式角度划分："><a href="#按照底层存储方式角度划分：" class="headerlink" title="按照底层存储方式角度划分："></a>按照底层存储方式角度划分：</h2><p>聚集索引：索引结构和数据一起存放的索引，InnoDB中的主键索引就属于聚集索引。<br>非聚集索引：索引结构和数据分开存放的索引，二级索引（辅助索引）就属于非聚集索引。MyISAM主键索引和非主键索引都用的是非聚集索引。</p>
-<h2 id="按照应用维度划分"><a href="#按照应用维度划分" class="headerlink" title="按照应用维度划分"></a>按照应用维度划分</h2><p>主键索引：加速查询+列值唯一（不可以有null）+表中只有一个<br>普通索引：仅加速查询<br>唯一索引：加速查询+列值唯一（可以有null）<br>覆盖索引：一个索引包含所有需要查询的字段的值<br>联合索引：多列值组成一个索引，专门用于组合搜索，其效率大于索引合并<br>全文索引：对文本的内容进行分词，进行搜索。目前只有 CHAR、VARCHAR ，TEXT 列上可以创建全文索引。一般不会使用，效率较低，通常使用搜索引擎如 ElasticSearch 代替。</p>
-<h1 id="主键索引（Primary-Key）"><a href="#主键索引（Primary-Key）" class="headerlink" title="主键索引（Primary Key）"></a>主键索引（Primary Key）</h1><p>数据表的主键列使用的就是主键索引。</p>
-<h1 id="二级索引（辅助索引）"><a href="#二级索引（辅助索引）" class="headerlink" title="二级索引（辅助索引）"></a>二级索引（辅助索引）</h1><p>二级索引的叶子结点存储的data是主键，通过二级索引，可以定位主键的位置。<br>唯一索引，普通索引，前缀索引等索引都属于二级索引。<br>唯一索引(Unique Key) ：唯一索引也是一种约束。唯一索引的属性列不能出现重复的数据，但是允许数据为 NULL，一张表允许创建多个唯一索引。 建立唯一索引的目的大部分时候都是为了该属性列的数据的唯一性，而不是为了查询效率。<br>普通索引(Index) ：普通索引的唯一作用就是为了快速查询数据，一张表允许创建多个普通索引，并允许数据重复和 NULL。<br>前缀索引(Prefix) ：前缀索引只适用于字符串类型的数据。前缀索引是对文本的前几个字符创建索引，相比普通索引建立的数据更小， 因为只取前几个字符。<br>全文索引(Full Text) ：全文索引主要是为了检索大文本数据中的关键字的信息，是目前搜索引擎数据库使用的一种技术。Mysql5.6 之前只有 MYISAM 引擎支持全文索引，5.6 之后 InnoDB 也支持了全文索引。</p>
-<h1 id="聚集索引和非聚集索引"><a href="#聚集索引和非聚集索引" class="headerlink" title="聚集索引和非聚集索引"></a>聚集索引和非聚集索引</h1><h2 id="聚集索引"><a href="#聚集索引" class="headerlink" title="聚集索引"></a>聚集索引</h2><p>聚集索引就是索引结构和数据一起存放的索引。InnoDB中的主键索引就属于聚集索引。<br>非叶子节点存储索引，叶子结点存储索引和对应的数据。</p>
-<h3 id="聚集索引的优点"><a href="#聚集索引的优点" class="headerlink" title="聚集索引的优点"></a>聚集索引的优点</h3><p>查询速度非常快：因为B+树本身就是一颗多路平衡查找树，叶子节点都是有序的，定位到索引的节点，就相当于定位到了数据。相比于非聚集索引，减少了一次读取数据的IO操作。<br>对排序查找和范围查找优化：聚集索引对于主键的排序查找和范围查找速度非常快。</p>
-<h3 id="聚集索引的缺点"><a href="#聚集索引的缺点" class="headerlink" title="聚集索引的缺点"></a>聚集索引的缺点</h3><p>依赖于有序的数据：不有序就要排序，就会很慢。<br>更新代价大：索引列被修改，对应的索引也会被修改，叶子节点还放着数据的话修改起来更麻烦，所以对于主键索引来说，主键一般都是不可被修改的。</p>
-<h2 id="非聚集索引"><a href="#非聚集索引" class="headerlink" title="非聚集索引"></a>非聚集索引</h2><p>非聚集索引就是索引和数据分开存放的索引。二级索引（辅助索引）就属于非聚集索引。MySQL中的MyISAM不管是主键还是非主键，都是用非聚集索引的。<br>非聚集索引的叶子节点不一定存放数据的指针，因为二级索引的叶子节点就存放的是主键，根据主键再回表查数据。</p>
-<h3 id="非聚集索引的优点"><a href="#非聚集索引的优点" class="headerlink" title="非聚集索引的优点"></a>非聚集索引的优点</h3><p>更新代价比较小，叶子节点不存放数据。</p>
-<h3 id="非聚集索引的缺点"><a href="#非聚集索引的缺点" class="headerlink" title="非聚集索引的缺点"></a>非聚集索引的缺点</h3><p>依赖于有序的数据：和聚集索引一样，都依赖于有序的数据。<br>可能会二次查询（回表）：非聚集索引最大的缺点，当查到索引对应的指针或主键后，可能还需要根据指针或主键再到数据文件或表中查询。</p>
-<h1 id="覆盖索引和联合索引"><a href="#覆盖索引和联合索引" class="headerlink" title="覆盖索引和联合索引"></a>覆盖索引和联合索引</h1><h2 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h2><p>即需要查询的字段正好是索引的字段，那么直接根据该索引，就可以查到数据了，而无需回表查询。</p>
-<h2 id="联合索引"><a href="#联合索引" class="headerlink" title="联合索引"></a>联合索引</h2><p>使用表中的多个字段创建索引，就是联合索引，也叫组合索引或复合索引。</p>
-<h2 id="最左前缀匹配原则"><a href="#最左前缀匹配原则" class="headerlink" title="最左前缀匹配原则"></a>最左前缀匹配原则</h2><p>在使用联合索引时，从左向右依次匹配查询条件，然后过滤数据，所以在使用联合索引时，将区分度高的字段放在最左边，这也可以过滤更多的数据。</p>
-<h1 id="索引下推"><a href="#索引下推" class="headerlink" title="索引下推"></a>索引下推</h1><p>索引下推是MySQL5.6版本中提供的一项索引优化功能，可以在非聚集索引遍历过程中，对索引中包含的字段先做判断，过滤掉不符合条件的记录，减少回表次数。</p>
-<h1 id="索引失效的场景"><a href="#索引失效的场景" class="headerlink" title="索引失效的场景"></a>索引失效的场景</h1><p>使用select *<br>创建了组合索引，但查询条件未遵守最左匹配原则<br>在索引列上进行计算、函数，类型转换等操作<br>在查询中使用or，且or的前后条件中有一个字段没有索引，涉及的索引都不会被使用到</p>
+        <h1 id="TCP保证传输可靠性"><a href="#TCP保证传输可靠性" class="headerlink" title="TCP保证传输可靠性"></a>TCP保证传输可靠性</h1><h2 id="报文段"><a href="#报文段" class="headerlink" title="报文段"></a>报文段</h2><p>基于数据块传输，数据块就是报文段</p>
+<h2 id="序列号"><a href="#序列号" class="headerlink" title="序列号"></a>序列号</h2><p>保证不丢包，给每个包一个序列号，给包排序，去重。</p>
+<h2 id="校验和"><a href="#校验和" class="headerlink" title="校验和"></a>校验和</h2><p>TCP 将保持它首部和数据的检验和。这是一个端到端的检验和，目的是检测数据在传输过程中的任何变化。如果收到段的检验和有差错，TCP 将丢弃这个报文段和不确认收到此报文段。</p>
+<h2 id="确认应答"><a href="#确认应答" class="headerlink" title="确认应答"></a>确认应答</h2><p>TCP 传输的过程中，每次接收方收到数据后，都会对传输方进行确认应答。也就是发送 ACK 报文。这个 ACK 报文当中带有对应的确认序列号，告诉发送方，接收到了哪些数据，下一次的数据从哪里发。</p>
+<h2 id="超时重传"><a href="#超时重传" class="headerlink" title="超时重传"></a>超时重传</h2><p>当发送方发送数据之后，它启动一个定时器，等待目的端确认收到这个报文段。接收端实体对已成功收到的包发回一个相应的确认信息（ACK）。如果发送端实体在合理的往返时延（RTT）内未收到确认消息，那么对应的数据包就被假设为已丢失，并进行重传。</p>
+<h2 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h2><p>TCP 连接的每一方都有固定大小的缓冲空间，TCP 的接收端只允许发送端发送接收端缓冲区能接纳的数据。当接收方来不及处理发送方的数据，能提示发送方降低发送的速率，防止包丢失。TCP 使用的流量控制协议是可变大小的滑动窗口协议（TCP 利用滑动窗口实现流量控制）。</p>
+<h2 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h2><p>当网络拥塞时，减少数据的发送。</p>
 
       
     </div>
@@ -302,7 +287,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://slm2001.github.io/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/" title="MySQL索引" target="_blank" rel="external">https://slm2001.github.io/2023/03/21/MySQL索引/</a>
+      <a href="https://slm2001.github.io/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/" title="TCP怎么保证传输的有效性" target="_blank" rel="external">https://slm2001.github.io/2023/03/21/TCP怎么保证传输的有效性/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -348,10 +333,10 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2023/03/21/TCP%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E4%BC%A0%E8%BE%93%E7%9A%84%E6%9C%89%E6%95%88%E6%80%A7/" title="TCP怎么保证传输的有效性"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
     
+    <li class="next">
+      <a href="/2023/03/21/MySQL%E7%B4%A2%E5%BC%95/" title="MySQL索引"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
     
     
   </ul>
